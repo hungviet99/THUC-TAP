@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>HTML Layout</title>
+        <meta charset="UEF-8">
+        <meta name="viewport" content="width=device-with, initial-scale=1">
+        <style> 
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-color: cadetblue;
+            padding: 38px;
+            text-align: center;
+            font-size: 10px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 20%;
+            height:unset;
+            background-color:silver;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            background-color: #f1f1f1;
+            height: auto;
+        }
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: gray;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        </style>
+    </head>
+    
+<body>
+    <header><h1>Cities</h1></header>
+
+    <section>
+        <nav>
+        <ul>
+            <li><a href="#h1">London</a></li>
+            <li><a href="#h2">Paris</a></li>
+            <li><a href="#h3">USA</a></li>
+        </ul>
+        </nav>
+        <article>
+            <h1 id="h1">London</h1>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <h1 id="h2">Paris</h1>
+              <p></p>
+              <p></p>
+            <h1 id="h3">USA</h1> 
+            <p></p>
+        </article>
+    
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

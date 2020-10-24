@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  Enter name: <input type="text" name="fname" id="iptname"><br><br>
+  Enter age: <input type="text" name="tuoi" id="tuoi"><br><br>
+  Enter truong: <input type="text" name="truong" id="school"><br><br>
+  <button type="button" onclick="myFunction();">Nhập</button>
+
+<script>
+function myFunction() {
+  var inputVal = document.getElementById("iptname").value; 
+  var inputTuoi = document.getElementById("tuoi").value;
+  var inputSchool = document.getElementById("school").value;
+  alert("Họ tên: " + inputVal + "\n" + "Ngày Sinh: " + inputTuoi + "\n" + "Trường: " + inputSchool);
+}
+</script>
+
+</body>
+</html>
