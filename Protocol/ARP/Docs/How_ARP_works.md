@@ -6,4 +6,4 @@ Tất cả các hệ điều hành trong mạng đều giữ một bộ nhó cac
 
 ARP phát 1 yêu cầu tới tất cả các máy trong mạng LAN và hỏi xem có máy nào biết chúng đang sử dụng địa chỉ IP cụ thể đó không. Khi một máy nhận ra địa chỉ IP là của mình, nó sẽ gwuri trả lời để ARP cập nhật vào bộ nhớ cahe địa chỉ MAC ứng với địa chỉ IP đó để sử dụng cho tương lai và tiếp tục giao tiếp.
 
-![](./image/whatis-arp_desktop.png)
+![](../image/whatis-arp_desktop.png)
