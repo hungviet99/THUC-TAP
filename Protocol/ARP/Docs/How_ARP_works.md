@@ -7,3 +7,14 @@ Tất cả các hệ điều hành trong mạng đều giữ một bộ nhó cac
 ARP phát 1 yêu cầu tới tất cả các máy trong mạng LAN và hỏi xem có máy nào biết chúng đang sử dụng địa chỉ IP cụ thể đó không. Khi một máy nhận ra địa chỉ IP là của mình, nó sẽ gwuri trả lời để ARP cập nhật vào bộ nhớ cahe địa chỉ MAC ứng với địa chỉ IP đó để sử dụng cho tương lai và tiếp tục giao tiếp.
 
 ![](../image/whatis-arp_desktop.png)
+
+**Các keyword quan trọng liên quan đến ARP:**
+
+- `ARP Cache`: Sau khi phân giải địa chỉ MAC, ARP sẽ gửi nó đến nguồn nơi nó lưu trữ trong một bảng để tham khảo trong tương lai. Các giao tiếp tiếp theo có thể sử dụng địa chỉ MAC từ bảng
+
+- `ARP Cache Timeout`: Nó cho biết thời gian mà địa chỉ MAC trong bộ nhớ cache ARP có thể cư trú
+
+- `ARP request`: Điều này không có gì khác ngoài việc phát một gói tin qua mạng để xác nhận xem chúng tôi có gặp địa chỉ MAC đích hay không. 
+
+- `ARP response/reply`: Đây là phản hồi địa chỉ MAC mà nguồn nhận được từ đích hỗ trợ cho việc truyền dữ liệu thêm
+
