@@ -1,7 +1,8 @@
 # Ansible 
 
-Ansible là một công cụ, phần mềm cung cấp khả năng tự động hóa đơn giản nhưng mạnh mẽ để hỗ trợ máy tính đa nền tảng. Nó sử dụng chủ yếu cho những người sử dụng nó để triển khai ứng dụng, cập nhật trên máy trạm và máy chủ, quản lý cấu hình, cung cấp đám mây, điều phối dịch vụ nội bộ và gần như bất cứ điều gì mà quản trị viên hệ thống thực hiện hàng tuần hoặc hàng ngày.
+Ansible là một công cụ, phần mềm cung cấp khả năng tự động hóa đơn giản nhưng mạnh mẽ để hỗ trợ máy tính đa nền tảng, giúp giảm bớt thời gian cho các nhiệm vụ lặp đi lặp lại. Nó sử dụng chủ yếu cho những người sử dụng nó để triển khai ứng dụng, cập nhật trên máy trạm và máy chủ, quản lý cấu hình, cung cấp đám mây, điều phối dịch vụ nội bộ và gần như bất cứ điều gì mà quản trị viên hệ thống thực hiện hàng tuần hoặc hàng ngày.
 
+Ansible được ra đời vào tháng 2 năm 2012 bởi redhad, đến nay đã được 8 năm và phiên bản ổn định gần nhất được ra đời vào tháng 10 năm 2020
 ### Cách Ansible hoạt động 
 
 Trong Ansible có 2 loại máy tính là `control node` và `managed nodes`. `Control node` là một máy tính chạy Ansible, phải có ít nhất 1 `control node`. `Managed node` là bất kỳ thiết bị nào đang được quản lý bởi `control node`. 
