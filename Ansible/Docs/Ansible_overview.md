@@ -51,7 +51,7 @@ Ansible : Công cụ có thể sắp xếp các nhiệm vụ phức tạp của 
 
 Xây dựng trật tự từ sự hỗn loạn 
 
-Tập hợ những thứ khác nhau thành 1 thể thống nhất 
+Tập hợp những thứ khác nhau thành 1 thể thống nhất 
 
 
 
