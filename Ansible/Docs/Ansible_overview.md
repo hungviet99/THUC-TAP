@@ -19,9 +19,25 @@ Tự động hóa, quản lý và kết nối các giai đoạn vòng đời c�
 
 `provision` -> `configure` -> `deploy` -> `manage`
 
+Ansible có thể làm việc đa nền tảng, đa nhà cung cấp.
+
+- Baremetal 
+Ansible kết hợp nhiều công cụ quản lý datacenter để gọi và thực hiện các bước cấp phép cần thiết 
+- Ảo hóa 
+- Mạng 
+- Lưu trữ
+- Cloud
 #### Quản lý cấu hình (Management configuration)
 
 Quản lý hệ thống với các tập lệnh cấu hình nhất quán, cần ít người hơn và tốn ít thời gian hơn để duy trì. 
+
+Các thành viên trong nhóm hoàn thành công việc nhanh hơn và có thời gian tham gia vào các công việc quan trọng hơn thay vì quản lý cấu hình. 
+
+Mô hình tài nguyên hướng trạng thái mô tả trạng thái mong muốn của hệ thống. Bất kể hệ thống ở trạng thái nào, ansible hiểu cách chuyển nó sang trạng thái mong muốn 
+
+Ansible dựa vào hệ thống quản lý cấu hình từ xa an toàn nhất hiện có làm lớp truyền tải mặc định của nó: OpenSSH
+
+Tính năng Ansible trên hơn 1.300 mô-đun trong phân phối cốt lõi, cung cấp cơ sở tuyệt vời để xây dựng tự động hóa
 
 #### Triển khai ứng dụng (App Deployment)
 
@@ -31,7 +47,7 @@ Triển khai ứng dụng nhất quán, tất cả đều từ 1 khuôn khổ ch
 
     - Có thể lặp lại và tin cậy 
     - Đơn giản để viết và duy trì
-
+    - Siêu linh hoạt 
 
 #### Phân phối liên tục (Continuous Delivery)
 
