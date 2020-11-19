@@ -28,7 +28,7 @@ Ansible là công cụ mã nguồn mở hoàn toàn miễn phí được sử d�
 
 - Ansible Tower cung cấp việc xử lý lên đến 10 node, nếu muốn nhiều hơn thì phải trả phí. Ansible Tower cung cấp giao diện người dùng đồ họa gọn gàng với bảng điều khiển.
 
-- Ansible AWX (Ansible Web eXecutable) miễn phí, được tạo ra xung quanh cơ sở mã Ansible Tower
+- Ansible AWX (Ansible Web eXecutable) miễn phí
 
 ### Use Cases
 
