@@ -6,6 +6,7 @@ Công cụ Ansible được phát triển bởi Michael DeHaan, tác giả của
 
 Ansible được viết bởi Michael DeHaan vào năm 2012 và được Red Hat mua lại vào năm 2015. Đến nay đã ra đời được 8 năm và phiên bản ổn định gần nhất được ra đời vào tháng 10 năm 2020
 
+Một số 
 ### Cách Ansible hoạt động
 
 Trong Ansible có 2 loại máy tính là `control node` và `managed nodes`. `Control node` là một máy tính chạy Ansible, phải có ít nhất 1 `control node`. `Managed node` là bất kỳ thiết bị nào đang được quản lý bởi `control node`.
@@ -26,9 +27,9 @@ Ansible là công cụ mã nguồn mở hoàn toàn miễn phí được sử d�
 
 - Sử dụng ansible với CLI là miễn phí không giới hạn
 
-- Ansible Tower cung cấp việc xử lý lên đến 10 node, nếu muốn nhiều hơn thì phải trả phí. Ansible Tower cung cấp giao diện người dùng đồ họa gọn gàng với bảng điều khiển.
-
 - Ansible AWX (Ansible Web eXecutable) miễn phí
+
+- Ansible Tower cung cấp việc xử lý lên đến 10 node, nếu muốn nhiều hơn thì phải trả phí. Ansible Tower cung cấp giao diện người dùng đồ họa gọn gàng với bảng điều khiển.
 
 ### Use Cases
 
