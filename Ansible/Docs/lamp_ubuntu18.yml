@@ -1,0 +1,102 @@
+---
+- hosts: wpubuntu
+  become: yes
+  remote_user: root
+  vars: 
+    wp_mysql_db: wordpress
+    wp_mysql_user: wpuser
+    wp_mysql_password: NhanHoa@2020
+  tasks:
+  - name : install apache
+    apt:
+      name: apache2
+      state: present
+
+  - name: update sys
+    apt:
+      name: '*'
+      state: latest
+
+  - name: install PHP
+    apt:
+      name: '{{item}}'
+      state: present
+    with_items:
+    - php
+    - libapache2-mod-php
+    - php-cli
+    - php-common
+    - php-gd
+    - php-json
+    - php-curl
+    - php-mbstring
+    - php-mysqlnd
+    - php-xml
+    - php-xmlrpc
+    - php-soap
+    - php-intl
+    - php-zip
+    - php-opcache
+
+  - name: Start httpd service
+    service: 
+      name: apache2
+      enabled: true
+      state: started
+
+  - name: Install Mysql
+    apt:
+      name: '{{item}}'
+      state: present
+    with_items:
+    - mariadb-client
+    - mariadb-server
+    - python3-pymysql
+
+  - name: Start Mysql Service
+    service: 
+      name: mariadb
+      enabled: true
+      state: started
+
+  - name: create db wordpress
+    mysql_db:
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+      name: "{{wp_mysql_db}}"
+      encoding: latin1
+      collation: latin1_general_ci
+
+  - name: create user wpress
+    mysql_user:
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+      name: "{{wp_mysql_user}}"
+      host: "%"
+      password: "{{wp_mysql_password}}"
+      priv: "*.*:ALL"
+
+  - name: download source wordpress
+    unarchive:
+      src: https://wordpress.org/latest.tar.gz
+      dest: /var/www/html
+      remote_src: yes
+
+  - name: mv src wordpress
+    shell: mv /var/www/html/wordpress/* /var/www/html/
+
+  - name: mv file config
+    shell: mv /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+
+  - name: update file config wordpress
+    lineinfile: dest=/var/www/html/wp-config.php regexp={{ item.regexp }} line={{ item.line }}
+    with_items:
+    - {'regexp': "define\\( 'DB_NAME', '(database_name_here)+' \\);", 'line': "define('DB_NAME', '{{wp_mysql_db}}');"}
+    - {'regexp': "define\\( 'DB_USER', '(username_here)+' \\);", 'line': "define('DB_USER', '{{wp_mysql_user}}');"}
+    - {'regexp': "define\\( 'DB_PASSWORD', '(password_here)+' \\);", 'line': "define('DB_PASSWORD', '{{wp_mysql_password}}');"}
+
+  - name: chmod apache
+    shell: '{{item}}'
+    with_items:
+    - chown -R www-data:www-data /var/www/html/*
+    - chmod -R 755 /var/www/html/*
+    - mv /var/www/html/index.html /var/www/html/index.html.bk
+...

@@ -1,0 +1,21 @@
+---
+# tasks file for php_config
+- name: PHP packages are installed.
+  apt: name={{ item }} state=present
+  with_items: 
+  - php
+  - libapache2-mod-php
+  - php-cli
+  - php-common
+  - php-gd
+  - php-json
+  - php-curl
+  - php-mbstring
+  - php-mysqlnd
+  - php-xml
+  - php-xmlrpc
+  - php-soap
+  - php-intl
+  - php-zip
+  - php-opcache
+...
