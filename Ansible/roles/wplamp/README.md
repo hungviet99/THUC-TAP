@@ -19,7 +19,7 @@ Example Playbook
       vars:
         wp_mysql_db: wordpress
         wp_mysql_user: wpuser
-        wp_mysql_password: NhanHoa@2020
+        wp_mysql_password: password
       roles:
         - {role: wplamp/php_config, tags: ['php_config']}
         - {role: wplamp/apache_install, tags: ['apache_install']}
