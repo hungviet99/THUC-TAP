@@ -1,13 +1,19 @@
 # Wordpress Playbook
 
+Cài đặt cấu hình máy chủ web dựa trên wordpress với Mariadb, PHP 7.2, apache2.
 
+## Roles
+
+| Role | Description | var path | var name | 
+|-------|------------| -------- | -------- |
+| php_config | Cài đặt PHP và các phần mở rộng PHP cần thiết mà Wordpress cần | defaults/main.yml | php_packages | 
+| apache_install | Cài đặt apache2 làm web server | defaults/main.yml | apache_packages<br>apache_name_service |
+| mysql_install | Cài đặt `mariadb-server`, `mariadb-client` và `python-mysqldb` | defaults/main.yml | mysql_python_package_debian<br>python3-pymysql<br>sql_name_service<br>mariadb_packages |
+| wordpress | Thiết lập các user và db cho wordpress, tải về wordpress và thiết lập cấu hình cho wordpress | defaults/main.yml | wp_mysql_db<br> wp_mysql_user<br> wp_mysql_password<br> web_root<br> apache_name_service |
 
 
 Example Playbook
 ----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
       become: yes
       roles:
