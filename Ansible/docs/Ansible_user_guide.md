@@ -246,6 +246,3 @@ Playbook được thể hiện ở định dạng YAML, là 1 mô hình cấu h�
 ```
 
 Playbook có thể chứa nhiều plays. 
-
-### Host và user 
-
