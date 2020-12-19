@@ -6,21 +6,21 @@ Wireshark là công cụ phân tích giao thức mạng phổ biến nhất th�
 
 Kích đúp vào 1 giao diện nào đó để xem chi tiết lưu lượng các gói tin trên giao diện đó. Mình muốn xem lưu lượng trên giao diện wifi, kích đúp vào `wifi` : 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/interface.png)
+![](../images/interface.png)
 
 Sau đó lưu lượng các gói tin đi qua `wifi` sẽ hiển thị như sau : 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/interface2.png)
+![](../images/interface2.png)
 
 ta thấy rằng trên thanh công cụ có 1 nút màu đỏ, đó là nút sử dụng chụp lại lưu lượng hiện tại. 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/intserface3.png)
+![](../images/intserface3.png)
 
 Sau đó ta có thể lưu lại những gói tin này dưới dạng file pcap bằng cách : 
 
 Kích vào `file` sau đó chọn `save` 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/interface4.png)
+![](../images/interface4.png)
 
 ## Open file có sẵn 
 
@@ -44,39 +44,39 @@ Ta có thể sử dụng filter để loại bỏ các gói mà ta không quan t
 
 VD: Chỉ xem các IP dest là ip `192.168.1.54`
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/ipdst.png)
+![](../images/ipdst.png)
 
 - Tương tự như vậy ta chỉ xem các gói có ip src trùng khớp 
 
 VD: Chỉ xem các IP src là ip `192.168.1.54`
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/ipsrc.png)
+![](../images/ipsrc.png)
 
 - Chỉ xem các gói có cả IP src và IP dest trùng khớp 
 
 VD : Chỉ xem các gói có IP src là `192.168.1.54` và IP dest là `54.189.246.18`
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/ipsrc%2Cdst.png)
+![](../images/ipsrc%2Cdst.png)
 
 hoặc ta cũng có thể loại trừ các gói với IP nguồn và đích nhất định 
 
 VD: Loại trừ các gói có IP nguồn là `192.168.1.54` 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/loaiipnguon.png)
+![](../images/loaiipnguon.png)
 
 **Chỉ bắt các gói có port hoặc giao thức trùng khớp** 
 
 - Chỉ xem các gói có TCP port là 80 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/tcport80.png)
+![](../images/tcport80.png)
 
 - Chỉ bắt các gói sử dụng dịch vụ http 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/http.png)
+![](../images/http.png)
 
 - Bắt các gói đang sử dụng giao thức UDP hoặc ICMP
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/udpanddns.png)
+![](../images/udpanddns.png)
 
 Kết thúc phần sử dụng cơ bản của wireshark. 
 

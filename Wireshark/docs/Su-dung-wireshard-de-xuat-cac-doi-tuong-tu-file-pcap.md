@@ -17,7 +17,7 @@ Tải về  lưu lượng `extracting-objects-from-pcap-example-01.pcap.zip`. M�
 
 Sử dụng trường filter là `http.request`
 
-![1](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj1.jpg)
+![1](../images/obj1.jpg)
 
 Sau khi lọc trên http.request , hãy tìm hai yêu cầu GET tới smart-fax [.] Com . Yêu cầu đầu tiên kết thúc bằng .doc , cho biết yêu cầu đầu tiên trả về tài liệu Microsoft Word. Yêu cầu thứ hai kết thúc bằng .exe , cho biết yêu cầu thứ hai trả về tệp thực thi Windows. Các yêu cầu HTTP GET được liệt kê bên dưới.
 
@@ -26,13 +26,13 @@ Sau khi lọc trên http.request , hãy tìm hai yêu cầu GET tới smart-fax 
 
 Có thể xuất các đối tượngtrên từ danh sách đối tượng HTTP bằng cách sử dụng đường dẫn menu: `File` -> `Export Objects` -> `HTTP`. 
 
-![2](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj2.jpg)
+![2](../images/obj2.jpg)
 
 Sau khi vào Object list, ta tiến hành lưu lại 2 object `smart-fax . com`. 
 
-![3](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj3.jpg)
+![3](../images/obj3.jpg)
 
-![4](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj4.jpg)
+![4](../images/obj4.jpg)
 
 Sau khi lưu lại các file, sử dụng lệnh `file` để đọc thông tin loại tệp của 2 tệp vừa lưu. 
 
@@ -40,13 +40,13 @@ Sau khi lưu lại các file, sử dụng lệnh `file` để đọc thông tin 
 file Invoice&MSO-Request.doc
 ```
 
-![5](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj5.png)
+![5](../images/obj5.png)
 
 ```
 file knr.exe
 ```
 
-![6](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj6.jpg)
+![6](../images/obj6.jpg)
 
 Sau khi kiểm tra ta thấy đây là 1 tài liệu Microsoft Office Word và 1 file thực thi trên windows. 
 
@@ -54,7 +54,7 @@ Tiếp theo ta sẽ băm file và đưa đoạn hash lên virustotal để kiế
 
 Sử dụng sha256 để băm 2 file trên. 
 
-![7](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj7.jpg)
+![7](../images/obj7.jpg)
 
 Sau khi băm ta được 2 đoạn băm cho Invoice&MSO-Request.doc và knr.exe lần lượt như sau: 
 
@@ -70,11 +70,11 @@ tiếp theo ta sẽ sử dụng [virustotal](https://www.virustotal.com/) để 
 
 Dưới đây là kết quả khi kiểm tra của file `Invoice&MSO-Request.doc`, phát hiện có 38 công cụ phát hiện ra tệp này. 
 
-![8](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj8.jpg)
+![8](../images/obj8.jpg)
 
 Tiếp theo là kết quả kiểm tra của file `knr.exe` cũng cho thấy kết quả tương tự, có 48 công cụ phát hiện được tệp này. 
 
-![9](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj9.jpg)
+![9](../images/obj9.jpg)
 
 Ngaoì việc trích xuất các file độc hại, wireshard cũng có thể trích xuất ra các trang web. 
 
@@ -84,11 +84,11 @@ Sử dụng `extract-objects-from-pcap-example-02.pcap` để có thể trích x
 
 Sau đó, nếu muốn xem giao diện của trang web lừa đảo, chọn text/html và chọn `save` để lưu lại trang web.
 
-![10](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj10.jpg)
+![10](../images/obj10.jpg)
 
 Tiếp đó, mở bằng trình duyệt web để thấy được giao diện của trang web. 
 
-![11](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj11.jpg)
+![11](../images/obj11.jpg)
 
 ## Xuất ra các tệp từ traffic FTP 
 
@@ -96,19 +96,19 @@ Phần lab này ta sẽ sử dụng `extract-objects-from-pcap-example-05.pcap`
 
 Sử dụng filter là `ftp.request.command` để lọc ra các lệnh FTP. 
 
-![12](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj12.jpg)
+![12](../images/obj12.jpg)
 
 Sau khi lọc ra các lệnh FTP, ta có thể thấy có 5 file thực thi ta cần phải chú ý đó là `q.exe`,  `w.exe`, `e.exe`, `r.exe`, `t.exe`. 
 
 Bây giờ ta sử dụng bộ lọc dữ liệu `ftp-data` để xem lại lưu lượng truy cập từ kênh dữ liệu FTP. 
 
-![13](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj13.jpg)
+![13](../images/obj13.jpg)
 
 Lần lượt sử dụng TCP stream để lưu lại các file dữ liệu dứoi dạng raw. Sau đó sử dụng sha256 để băm các file. 
 
-![14](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj14.jpg)
+![14](../images/obj14.jpg)
 
-![15](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj15.jpg)
+![15](../images/obj15.jpg)
 
 Lần lượt ta thu được các file đã băm như sau : 
 
@@ -126,15 +126,15 @@ ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd  q.exe
 
 Sau đó lần lượt sử dụng các file đã băm đem tìm kiếm trên virustotal để xem có phát hiện được mối nguy hại liên quan đến các file này hay không. 
 
-![16](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj16.jpg)
+![16](../images/obj16.jpg)
 
-![17](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj17.jpg)
+![17](../images/obj17.jpg)
 
-![18](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj18.jpg)
+![18](../images/obj18.jpg)
 
-![19](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj19.jpg)
+![19](../images/obj19.jpg)
 
-![20](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj20.jpg)
+![20](../images/obj20.jpg)
 
 Như vậy ta thấy răng tất cả các file được phát hiện đều có thể là 1 phần mềm độc hại. 
 
@@ -146,15 +146,15 @@ Một số loại phần mềm độc hại được thiết kế để biến m
 
 Sử dụng filter `smtp.data.fragment` ta sẽ thấy các gói tin có subject. 
 
-![21](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj21.jpg)
+![21](../images/obj21.jpg)
 
 Tiếp đó, sử dụng `Export Objects` -> `IMF` để xem các đối tượng IMF. Tại đây, ta thấy tất cả tin nhắn đều được liệt kê với phần mở rộng là eml. Tiến hành lưu lại 1 trong các đối tượng dứoi dạng file eml. 
 
-![22](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj22.jpg)
+![22](../images/obj22.jpg)
 
 Mở file và xem nội dụng của email. 
 
-![23](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/obj23.jpg)
+![23](../images/obj23.jpg)
 
 
 **Tài liệu tham khảo**

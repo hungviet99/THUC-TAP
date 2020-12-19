@@ -4,15 +4,15 @@
 
 Bước 1: Kích chọn static
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/static1.png)
+![](../images/static1.png)
 
 Bước 2: Kích chọn DNS 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/static2.png)
+![](../images/static2.png)
 
 Bước 4: Phân tích các thông số 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/static3.png)
+![](../images/static3.png)
 
 Ta có thể thấy rằng : 
 
@@ -32,15 +32,15 @@ Ta có thể thấy rằng :
 
 Bước 1: Kích chọn static
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/static1.png)
+![](../images/static1.png)
 
 Bước 2: Kích chọn HTTP và chọn Packet counter
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/static4.png)
+![](../images/static4.png)
 
 Bước 3: Phân tích các thông số
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/static5.png)
+![](../images/static5.png)
 
 1. Đây là số gói tin HTTP
 
@@ -50,9 +50,9 @@ Bước 3: Phân tích các thông số
 
 Bước 4. Kích chọn HTTP và chọn Requests
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/static6.png)
+![](../images/static6.png)
 
 Ở đây ta có thể xem các request đến các uri của các trang web. Kích vào domain của các trang web để xem các request gửi tới uri nào. 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/Wireshark/image/static7.png)
+![](../images/static7.png)
 
