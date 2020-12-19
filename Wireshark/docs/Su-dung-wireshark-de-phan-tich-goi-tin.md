@@ -20,7 +20,7 @@ Giao diện khi bắt gói tin có 3 phần sau :
 
 ## Tìm mật khẩu FTP 
 
-Tải về file [FTPlogin.pcapng](../tai_lieu/FTPlogin.pcapng). Sau đó mở file `FTPlogin.pcapng` bằng wireshark và làm như sau: 
+Tải về file [FTPlogin.pcapng](../traffic/FTPlogin.pcapng). Sau đó mở file `FTPlogin.pcapng` bằng wireshark và làm như sau: 
 
 Nhập vào ở mục filter nhập vào ftp để lọc ra các gói tin sử dụng giao thức ftp 
 
@@ -32,7 +32,7 @@ Khi lọc ra các gói tin sử dụng ftp, ta có thể dễ dàng thấy đư�
 
 ## Tìm mật khẩu http 
 
-Tải về file [httpLogin.pcapng](../tai_lieu/httpLogin.pcapng). Sau đó mở file `httpLogin.pcapng` bằng wireshark và làm như sau: 
+Tải về file [httpLogin.pcapng](../traffic/httpLogin.pcapng). Sau đó mở file `httpLogin.pcapng` bằng wireshark và làm như sau: 
 
 Sử dụng filter để lọc ra các gói tin sử dụng giao thức http 
 
@@ -76,7 +76,7 @@ Kiểm tra gói tin chứa mã trạng thái, gói tin số  `86` thì ta thấy
 
 HTTP Basic Authen sử dụng Base64 để mã hóa mật khẩu trước khi truyền đi. Điều này không khác gì nhiều so với truyền đi 1 đoạn text thông thường vì wireshark sẽ tự động giải mã nó. 
 
-Tải xuống file [BasicLogin.pcap](../tai_lieu/BasicLogin.pcapng) để thực hành phần này. 
+Tải xuống file [BasicLogin.pcap](../traffic/BasicLogin.pcapng) để thực hành phần này. 
 
 Mở file `BasicLogin.pcapng` và sử dụng filter để lọc ra các gói tin sử dụng giao thức HTTP, sẽ được kết quả như dưới đây
 
