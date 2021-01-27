@@ -2,7 +2,7 @@
 
 Mô hình cài đặt: 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/set1.png)
+![](../images/set1.png)
 
 Thực hiện cấu hình với quyền root.
 
@@ -133,7 +133,7 @@ allow-query     { localhost; 10.10.35.0/24; };
 
 Phần Option trong file sẽ trông như sau: 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/set2.png)
+![](../images/set2.png)
 
 ### Kiểm tra cấu hình và bật dịch vụ 
 
@@ -144,7 +144,7 @@ named-checkconf
 named-checkzone hungnv.vn /var/named/forward.hung
 named-checkzone hungnv.vn /var/named/reverse.hung
 ```
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/set3.png)
+![](../images/set3.png)
 
 - Khởi động dịch vụ named
 
@@ -202,7 +202,7 @@ nslookup dns-server.hungnv.vn
 nslookup client.hungnv.vn
 ```
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/set5.png)
+![](../images/set5.png)
 
 
 Sử dụng lệnh dig để xem chi tiết hơn các bản ghi. 
@@ -212,7 +212,7 @@ dig 10.10.35.191
 dig 10.10.35.199
 ```
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/set6.png)
+![](../images/set6.png)
 
 Như vậy ta đã cài đặt thành công mô hình client server cho DNS. Bây giờ ta sẽ thêm 1 bản ghi A trên DNS server để trỏ cho web client. 
 
@@ -267,7 +267,7 @@ systemctl status named
 
 Sử dụng nslookup để kiểm tra bản ghi. 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/set7.png)
+![](../images/set7.png)
 
 Ta thấy rằng tên miền hungnv.local đã được gán cho địa chỉ 10.10.35.196
 
@@ -277,7 +277,7 @@ Bây giờ tiến hành curl đến trang web để kiểm tra hoạt động c�
 curl -I hungnv.local
 ```
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/set8.png)
+![](../images/set8.png)
 
 Như vậy, đã có thể truy cập web với địa chỉ `10.10.35.196` bằng tên miền `hungnv.local`. 
 
