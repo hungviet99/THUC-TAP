@@ -15,11 +15,11 @@ Mình có 1 DNS client với IP là `10.10.35.194` và dns server với IP là `
 ip.addr == 10.10.35.194 || ip.addr == 10.10.35.191
 ```
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dnw8.png)
+![](../images/dnw8.png)
 
 Ta xem gói tin đầu tiên hiển thị sau khi filter (gói tin với số thứ tự 13)
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dnw10.png)
+![](../images/dnw10.png)
 
 Các thông tin trên gói tin chỉ ra rằng, đây là gói tin query bản ghi A của tên miền `nhanhoa.com` với: 
 
@@ -33,7 +33,7 @@ Thời gian bắt đầu truy vấn là `01:42:46.936276`
 
 Tiếp theo ta xem gói tin với số thứ tự 14.
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dnw14.png)
+![](../images/dnw14.png)
 
 Ta thâý rằng gói tin này là gói tin query từ DNS server tới 1 máy chủ có thẩm quyền bên ngoài. Tức là sau khi nhận được yêu cầu bản ghi A từ Client, DNS server kiểm tra không thấy lưu thông tin về bản ghi này thì nó liền gửi 1 yêu cầu về thông tin bản ghi A của tên miền nhanhoa.com cho 1 máy chủ root. 
 
@@ -49,7 +49,7 @@ Gói tin tiếp theo (gói tin số 15)
 
 Đây là gói tin trả lời truy vấn từ root cho dns server rằng máy chủ DNS server có thể đến các máy chủ có thẩm quyền được liệt kê để hỏi. 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dnw11.png)
+![](../images/dnw11.png)
 
 1. Gói tin được gửi từ máy chủ root có địa chỉ IP `192.35.51.30` gửi tới dns server có địa chỉ `10.10.35.191`. 
 
@@ -65,7 +65,7 @@ Tiếp theo, ta xem các gói tin 23.
 
 Sau có đầy đủ thông tin về các máy chủ có thẩm quyền, DNS server sẽ tiến hành hỏi máy chủ đó về thông tin bản ghi cho tên miền `nhanhoa.com`. 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dnw13.png)
+![](../images/dnw13.png)
 
 1. Gói tin query được gửi từ dns server đến địa chỉ `103.28.36.26`- 1 trong những địa chỉ mà root gửi về cho dns server yêu cầu bản ghi A của tên miền `nhanhoa.com`
 
@@ -77,7 +77,7 @@ Gói tin số 24, là gói tin được gửi từ địa chỉ của máy chủ
 
 Có thể thấy, gói tin này là gói tin trả về thông tin địa chỉ IP của tên miền `nhanhoa.com`. 
 
-![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dnw12.png)
+![](../images/dnw12.png)
 
 Từ các thông tin có thể thấy 
 

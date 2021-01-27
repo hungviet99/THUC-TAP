@@ -30,7 +30,7 @@ Có nhiệm vụ phân giải tên miền sang địa chỉ IP và ngược lạ
 
     Ví dụ bạn chạy Apache trên máy Ubuntu và cấu hình IP, domain trong file /`etc/hosts`, sau đó dùng domain bạn vừa cấu hình truy cập vào Internet
 
-    ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dn1.png)
+    ![](../images/dn1.png)
 
 - Tuy nhiên file trên chỉ làm việc trên môi trường localhost, còn với những mạng bên ngoài nó sẽ không làm việc. Lúc này bạn sẽ cần đến DNS.
 
@@ -42,7 +42,7 @@ Có nhiệm vụ phân giải tên miền sang địa chỉ IP và ngược lạ
 
 - Hiện nay hệ thống tên miền trên thế giới được phân bố theo cấu trúc hình cây. Tên miền cấp cao nhất là tên miền gốc (ROOT) được thể hiện bằng dấu "."
 
-   ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/set9.png)
+   ![](../images/set9.png)
 
 - Tên miền cấp cao dùng chung- gTLDs (generic Top Level Domains) : `.com`, `.net`, `.org`, ...
 - Tên miền cấp cao quốc gia – ccTLD (country code Top Level Domains) : `.vn`, `.jp`, `.kr`, ...
@@ -86,7 +86,7 @@ Danh sách tên miền cấp cao (TLD), bao gồm các tên miền cấp cao dù
     - **Primary name server** : là máy chủ tên miền lấy dữ liệu cho các zone của nó từ các file có sẵn trên máy.
     - **Secondary name server** : là máy chủ tên miền lấy dữ liệu cho các zone của nó từ một máy chủ tên miền primary khác. Khi máy chủ secondary khởi động nó sẽ kết nối đến máy chủ primary để lấy dữ liệu từ máy này về cho các zone mà nó quản lý. Quá trình lấy dữ liệu từ máy primary về máy secondary được gọi là zone transfer.
 
-    ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dn2.png)
+    ![](../images/dn2.png)
 
 - Truy vấn tương tác (Iterative) và truy vấn đệ quy(Recursive): là hai chức năng thường bị hiểu nhầm trong Name Server. 
     - NS truy vấn tương tác chỉ có thể trả lời thông tin mà máy chủ này biết hoặc đã được cache. 
@@ -96,35 +96,35 @@ Danh sách tên miền cấp cao (TLD), bao gồm các tên miền cấp cao dù
 
     - **Bước 1**: Máy tính gửi một yêu cầu phân giải đến máy chủ NS đã được cấu hình, thông thường được đặt tại nhà cung cấp dịch vụ Internet của người dùng.
 
-        ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dn3.png)
+        ![](../images/dn3.png)
 
     - **Bước 2**: NS đệ quy bắt đầu hỏi một trong những máy chủ DNS gốc đã được cấu hình trước để tìm tài nguyên được yêu cầu.​
 
-        ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dn4.png)
+        ![](../images/dn4.png)
 
         Máy chủ root DNS không biết địa chỉ này là gì nhưng biết máy chủ DNS chịu trách nhiệm cho tên miền .com. Hãy hỏi tiếp máy chủ DNS đó”​
 
     - **Bước 3**: NS đệ quy tiếp tục hỏi một trong những máy chủ DNS chịu trách nhiệm tên miền `.com`
 
-        ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dn5.png)
+        ![](../images/dn5.png)
 
         Máy chủ root DNS không biết địa chỉ này là gì nhưng biết máy chủ DNS nào chịu trách nhiệm cho tên miền `.google.com`. Hãy hỏi tiếp máy chủ DNS đó.
 
     - **Bước 4**: NS đệ quy hỏi một trong những NS `google.com`
 
-        ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dn6.png)
+        ![](../images/dn6.png)
 
         Máy chủ DNS chịu trách nhiệm cho tên miền `.google.com` trả kết quả cho NS đệ quy
 
     - **Bước 5**: NS đệ quy gửi kết quả trả về máy tính của người dùng. Sau đó nó sẽ ghi nhớ (cache) dữ liệu trong khoảng thời gian TTL.
 
-        ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dn7.png)
+        ![](../images/dn7.png)
 
         Địa chỉ của *www.google.com* là `216.239.53.99`
 
     - **Bước 6**: Máy tính người dùng đã có thể gửi HTTP request đến máy chủ web của Google
 
-        ![](https://github.com/hungviet99/thuc_tap/blob/master/DNS/images/dn8.png)
+        ![](../images/dn8.png)
 
 ### 3.5. Máy chủ tên miền DNS ROOT server
 
